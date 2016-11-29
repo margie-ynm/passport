@@ -13,5 +13,7 @@ class Place
   define_method(:stamp_passport) do
     @@places_visited.push(self)
   end
-
+  define_singleton_method(:get_new_passport) do
+    @@places_visited = []
+  end
 end
